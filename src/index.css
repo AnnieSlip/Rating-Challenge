@@ -1,0 +1,114 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --wight_grey: hsl(217, 12%, 63%);
+  --medium_grey: hsl(216, 12%, 54%);
+  --dark_blue: hsl(213, 19%, 18%);
+  --very_dark_blue: hsl(216, 12%, 8%);
+  --orange: hsl(25, 97%, 53%);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  background-color: var(--very_dark_blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.content {
+  width: 340px;
+  padding: 40px;
+  background-color: var(--dark_blue);
+  color: var(--wight_grey);
+  border-radius: 30px;
+}
+
+.content h2 {
+  color: var(--white);
+}
+
+.submit_btn {
+  background-color: var(--orange);
+  width: 100%;
+  border-radius: inherit;
+  border: none;
+  padding: 10px;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.submit_btn:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.star_icon {
+  color: var(--orange);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: var(--very_dark_blue);
+}
+
+.rate_btn {
+  background-color: var(--medium_grey);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.rate_btn:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.active {
+  background-color: red;
+}
+
+.rate_btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 24px auto;
+}
+
+.submitted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitted p {
+  text-align: center;
+}
+
+.rating {
+  color: var(--orange);
+  background-color: var(--very_dark_blue);
+  border-radius: inherit;
+  padding: 5px 15px;
+}
+
+.thank_you_image {
+  margin-bottom: 10px;
+}
