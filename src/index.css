@@ -27,8 +27,13 @@ code {
     monospace;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .content {
-  width: 340px;
+  width: 400px;
   padding: 40px;
   background-color: var(--dark_blue);
   color: var(--wight_grey);
@@ -37,6 +42,7 @@ code {
 
 .content h2 {
   color: var(--white);
+  margin: 20px auto;
 }
 
 .submit_btn {
@@ -110,5 +116,11 @@ code {
 }
 
 .thank_you_image {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .content {
+    width: 350px;
+  }
 }
