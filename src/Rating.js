@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import { AiTwotoneStar } from "react-icons/ai";
 
 const Rating = ({ onSubmitHandler, newRate }) => {
+  const [active, setActive] = useState(false);
   const rateArr = [1, 2, 3, 4, 5];
+
+  const handleClick = () => {
+    setActive(true);
+  };
 
   return (
     <form className="content" onSubmit={onSubmitHandler}>
@@ -15,7 +20,15 @@ const Rating = ({ onSubmitHandler, newRate }) => {
       </p>
       <div className="rate_btn_container">
         {rateArr.map((num, index) => {
-          return <Button rate={num} key={index} newRate={newRate} />;
+          return (
+            <Button
+              rate={num}
+              key={index}
+              newRate={newRate}
+              onClick={handleClick}
+              className={active ? "active" : ""}
+            />
+          );
         })}
       </div>
       <button type="submit" className="submit_btn">

@@ -5,7 +5,7 @@ import Rating from "./Rating";
 const App = () => {
   const [submitted, setSubmitted] = useState(false);
   const [rate, setRate] = useState(0);
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState(false);
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -16,7 +16,7 @@ const App = () => {
 
   const newRate = (num) => {
     setRate(num);
-    setActive(num);
+    setActive(true);
   };
 
   if (!submitted) {
