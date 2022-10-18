@@ -3,12 +3,8 @@ import Button from "./Button";
 import { AiTwotoneStar } from "react-icons/ai";
 
 const Rating = ({ onSubmitHandler, newRate }) => {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(null);
   const rateArr = [1, 2, 3, 4, 5];
-
-  const handleClick = () => {
-    setActive(true);
-  };
 
   return (
     <form className="content" onSubmit={onSubmitHandler}>
@@ -25,8 +21,8 @@ const Rating = ({ onSubmitHandler, newRate }) => {
               rate={num}
               key={index}
               newRate={newRate}
-              onClick={handleClick}
-              className={active ? "active" : ""}
+              onClick={() => setActive(num)}
+              className={`rate_btn ${active == num && "active"}`}
             />
           );
         })}
