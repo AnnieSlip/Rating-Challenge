@@ -58,16 +58,14 @@ code {
   background-color: var(--white);
   color: var(--orange);
 }
-
 .star_icon {
-  color: var(--orange);
-  width: 20px;
-  height: 20px;
+  display: flex;
+  width: 30px;
   border-radius: 50%;
-  padding: 10px;
+  padding: 10px 20px;
   background-color: var(--very_dark_blue);
+  justify-content: center;
 }
-
 .rate_btn {
   background-color: var(--medium_grey);
   border: none;
@@ -83,7 +81,7 @@ code {
 }
 
 .active {
-  background-color: red;
+  background-color: var(--white);
 }
 
 .rate_btn_container {

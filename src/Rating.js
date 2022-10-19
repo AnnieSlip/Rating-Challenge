@@ -3,12 +3,14 @@ import Button from "./Button";
 import { AiTwotoneStar } from "react-icons/ai";
 
 const Rating = ({ onSubmitHandler, newRate }) => {
-  const [active, setActive] = useState(null);
   const rateArr = [1, 2, 3, 4, 5];
+  const [active, setActive] = useState(null);
 
   return (
     <form className="content" onSubmit={onSubmitHandler}>
-      <AiTwotoneStar className="star_icon" />
+      <div className="star_icon">
+        <img src="../assets/Path.png" />
+      </div>
       <h2>How did we do?</h2>
       <p>
         Please let us know how did with your support request. All feedback is
@@ -21,8 +23,11 @@ const Rating = ({ onSubmitHandler, newRate }) => {
               rate={num}
               key={index}
               newRate={newRate}
-              onClick={() => setActive(num)}
-              className={`rate_btn ${active == num && "active"}`}
+              onClick={() => {
+                setActive(num);
+                newRate(num);
+              }}
+              className={`rate_btn  ${active == num ? "active" : ""}`}
             />
           );
         })}
